@@ -4,15 +4,16 @@
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+
 }
 
 header {
-  background-color: aqua;
+  background-color: rgb(255, 157, 45);
 }
 
 #Logo {
   position: relative;
-  left: 20%;
+  left: 15%;
   width: 20%;
   height: 20%;
 }
@@ -20,7 +21,7 @@ header {
 #pesquisa {
   position: absolute;
   top: 10%;
-  left: 40%;
+  left: 38%;
   width: 30%;
   height: 5%;
 }
@@ -28,11 +29,49 @@ header {
  nav {
       position: absolute;
       left: 75%;
-      top: 11%;
+      top: 10%;
       display: flex;
       align-items: center;
       gap: 25px;
       font-size: 1.5rem;
+    }
+
+    .bi{
       cursor: pointer;
     }
 
+    .bi:hover{
+      color: white;
+    }
+
+    #agenda{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      width: 23%;
+
+    }
+
+    #agendatext{
+      margin: 1%;
+      font-size: small;
+    }
+
+    #link{
+      color: black;
+    }
+
+    #link:hover{
+      color: white;
+    }
+
+    #btnBusca{
+      float: left;
+      cursor: pointer;
+    }
+
+    .card-img-top{
+      width: 30%;
+      height: 20%;
+      align-self: center;
+    }

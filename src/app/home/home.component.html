@@ -1,15 +1,35 @@
 <main>
   <header>
-     <nav>
-       <i  class="bi bi-telephone-fill"></i>
-        <i  class="bi bi-person-circle"></i>
+    <nav>
+      <div id="agenda">
+        <a id="link" href="">
+          <i  class="bi bi-calendar-event-fill"></i>
+        </a>
+        <p id="agendatext">Agende Agora</p>
+      </div>
+      <i class="bi bi-cart-fill"></i>
+      <i class="bi bi-telephone-fill"></i>
+      <i class="bi bi-person-circle"></i>
     </nav>
-      <div id="cabecalho">
-        <a href="home">
-        <img id="Logo" src="PetViva.png"></a>
-        <input id="pesquisa" type="search" placeholder="Pesquisar">
-        <nav>
-    </nav>
-  </div>
+    <div id="cabecalho">
+      <a href="home"> <img id="Logo" src="PetViva.png" /></a>
+        <form id="pesquisa" action="https://google.com/search" method="GET">
+          <input type="text" name="q" />
+          <button type="submit">Buscar<i class="bi bi-search"></i></button>
+        </form>
+      <nav></nav>
+    </div>
   </header>
+  <br />
+  <app-carrousel></app-carrousel>
+  <br /><br />
+  <h3>Produtos Recomendados</h3>
+  <div class="card" style="width: 11rem;">
+    <img class="card-img-top" src="raçãogolden.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Golden Cão Adulto - Carne - 15kg</h5>
+      <p class="card-text">R$171,99</p>
+      <a href="#" class="btn btn-primary">Comprar</a>
+    </div>
+  </div>
 </main>

@@ -1,0 +1,26 @@
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 50%;
+  height: 1%;
+  margin-left: 25%;
+}
+
+.carousel-image {
+  width: 55%;
+  height: 10%;
+  display: none;
+  margin-left: 25%;
+}
+
+.carousel-image.active {
+  display: block;
+  height: 10%;
+}

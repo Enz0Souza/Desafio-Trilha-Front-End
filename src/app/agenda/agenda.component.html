@@ -1,0 +1,36 @@
+<main>
+  <h1 id="titulo">AGENDAMENTO:</h1>
+  <div id="formbody">
+  <form action="" method="get">
+    <label for="name">Nome:</label>
+    <input type="text" required />
+    <label for="cpf">Cpf:</label>
+    <input type="cpf" />
+    <label for="endereço">Endereço:</label>
+    <input type="text" />
+    <label for="tel">Telefone:</label>
+    <input type="tel" />
+    <label for="opções">Serviço Requirido:</label>
+    <select name="serviçõs" id="services">
+      <option value="#" disabled selected>Selecione o Serviço</option>
+      <option value="banho">Banho</option>
+      <option value="tosa">Tosa</option>
+      <option value="banhotosa">Banho & Tosa</option>
+    </select>
+      <label for="agendamentoData">Data do Agendamento:</label>
+      <input type="date" id="agendamentoData" name="agendamentoData" required>
+      <label for="horario">Horarios Disponiveis:</label>
+
+        <label for="agendamentohorario">Horário:</label>
+        <input type="time"
+               id="agendamentohorario"
+               name="agendamentohorario"
+               required
+               min="10:00"
+               max="18:00"
+               step="3000">
+      <button type="submit">Agendar</button>
+    </form>
+  </div>
+</main>
+

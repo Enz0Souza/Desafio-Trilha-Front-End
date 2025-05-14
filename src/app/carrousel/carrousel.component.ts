@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-carrousel',
@@ -8,24 +10,32 @@ import { Component } from '@angular/core';
   styleUrl: './carrousel.component.css'
 })
 export class CarrouselComponent {
-  currentIndex = 0;
+  intervalId: any; //armazena o setinterval para poder cancelalo
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  currentIndex = 0;//iniciando o array pela 1 imagem
   images = [
     { src: 'anuncio.png'},
     { src: 'petshoppromo.png'},
     { src: 'imagempethshop.png'},
   ];
-  ngOnInit() {
-    setInterval(() => {
-      this.nextSlide();
-    }, 2000);
+  ngOnInit() {//slide automatico
+    if (isPlatformBrowser(this.platformId)) {
+      this.intervalId = setInterval(() => {
+        this.nextSlide();
+      }, 2000);
+    }
   }
-  nextSlide() {
+
+  nextSlide() {//função para passar para o proximo slide
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
-  backSlide() {
+  backSlide() {//função para voltar para o slide anterior
       this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
 
 }
+
+
+

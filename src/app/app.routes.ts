@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AgendaComponent } from './agenda/agenda.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
 
@@ -17,6 +18,9 @@ export const routes: Routes = [
 
   {
     path:'agendamento', component: AgendaComponent
+  },
+  {
+    path:'login', component: LoginComponent
   },
 
 

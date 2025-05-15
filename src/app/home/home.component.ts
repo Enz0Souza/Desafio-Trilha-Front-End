@@ -8,5 +8,6 @@ import { CarrouselComponent } from '../carrousel/carrousel.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+    
 
 }

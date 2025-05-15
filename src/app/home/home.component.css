@@ -2,6 +2,11 @@ h3{
   margin: 1%;
 }
 
-#produtos{
-  
+.card{
+  display: inline-block;
+  margin: 0.5%;
+}
+
+.card-img-top{
+   margin-left: 35%;
 }

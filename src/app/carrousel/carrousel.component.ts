@@ -14,9 +14,9 @@ export class CarrouselComponent {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
   currentIndex = 0;//iniciando o array pela 1 imagem
   images = [
-    { src: 'anuncio.png'},
-    { src: 'petshoppromo.png'},
-    { src: 'imagempethshop.png'},
+    { src: 'banner.png'},
+    { src: 'Banner-site.png'},
+
   ];
   ngOnInit() {//slide automatico
     if (isPlatformBrowser(this.platformId)) {

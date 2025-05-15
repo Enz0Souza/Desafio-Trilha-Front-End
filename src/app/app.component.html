@@ -1,22 +1,68 @@
 <header>
+
   <nav>
     <div id="agenda">
       <a id="link" href="agendamento">
-        <i  class="bi bi-calendar-event-fill"></i>
+        <i class="bi bi-calendar-event-fill"></i>
       </a>
       <p id="agendatext">Agende Agora</p>
     </div>
     <i class="bi bi-cart-fill"></i>
+    <button id="headerbutton" (click)="ToggleNotification()">
+      <i class="bi bi-bell-fill"></i>
+    </button>
+    <div id="card" *ngIf="IsNotificationOpen">
+      <div id="card-header">
+        <div id="card-body">
+          <p>Nenhuma Notificação</p>
+        </div>
+      </div>
+    </div>
     <i class="bi bi-telephone-fill"></i>
-    <i class="bi bi-person-circle"></i>
+    <button id="headerbutton" (click)="ToggleUserCard()"><i class="bi bi-person-circle"></i></button>
+    <div id="card-user" *ngIf="IsUserOpen">
+      <div id="card-header-user">
+        <h5>Usuario:</h5>
+        <div id="card-body-user">
+          <a href="login">
+          <button id="btnlog-sign">Login/Sign-in</button></a>
+        </div>
+      </div>
+    </div>
   </nav>
   <div id="cabecalho">
     <a href="home"> <img id="Logo" src="PetViva.png" /></a>
-      <form id="pesquisa" action="" method="GET">
-        <input id="inputsh" type="text" name="q" />
-        <button type="submit"><i class="bi bi-search"></i></button>
-      </form>
+    <form id="pesquisa" action="" method="GET">
+      <input id="inputsh" type="text" name="q" placeholder="Pesquisar" />
+      <button type="submit"><i class="bi bi-search"></i></button>
+    </form>
     <nav></nav>
   </div>
+  <div>
+  <img id="decoracao" src="decoração (1).png"></div>
 </header>
+<div id="category">
+    <a href="">
+    <p>Cães</p>
+</a>
+<a href="">
+    <p>Gatos</p>
+</a>
+<a href="">
+    <p>Passaros</p>
+</a>
+<a href="">
+    <p>Acessórios</p>
+</a>
+<a href="">
+    <p>Produtos de Limpeza</p>
+</a>
+<a href="">
+    <p>Decorações</p>
+</a>
+<a href="">
+    <p>Promoções</p>
+</a>
+  </div>
 <router-outlet></router-outlet>
+<app-footer></app-footer>

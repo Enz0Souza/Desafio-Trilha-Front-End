@@ -14,8 +14,8 @@ header {
 #Logo {
   position: relative;
   left: 10%;
-  width: 20%;
-  height: 20%;
+  width: 16%;
+  height: 10%;
 }
 
 #pesquisa {
@@ -28,56 +28,102 @@ header {
   height: 4%;
 }
 
-#inputsh{
+#inputsh {
   width: 100%;
 }
 
- nav {
-      position: absolute;
-      left: 75%;
-      top: 10%;
-      display: flex;
-      align-items: center;
-      gap: 65px;
-      font-size: 1.5rem;
-    }
+nav {
+  position: absolute;
+  left: 68%;
+  top: 10%;
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  font-size: 1.5rem;
+}
 
-    .bi{
-      cursor: pointer;
-    }
+.bi {
+  cursor: pointer;
+}
 
-    .bi:hover{
-      color: white;
-    }
+.bi:hover {
+  color: white;
+}
 
-    #agenda{
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      width: 23%;
+#agenda {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 15%;
+}
 
-    }
+#agendatext {
+  margin: 1%;
+  font-size: small;
+}
 
-    #agendatext{
-      margin: 1%;
-      font-size: small;
-    }
+#link {
+  color: black;
+}
 
-    #link{
-      color: black;
-    }
+#link:hover {
+  color: white;
+}
 
-    #link:hover{
-      color: white;
-    }
+#btnBusca {
+  float: left;
+  cursor: pointer;
+}
 
-    #btnBusca{
-      float: left;
-      cursor: pointer;
-    }
+.card-img-top {
+  width: 30%;
+  height: 20%;
+  align-self: center;
+}
 
-    .card-img-top{
-      width: 30%;
-      height: 20%;
-      align-self: center;
-    }
+#headerbutton {
+  background-color: transparent;
+  border: none;
+}
+
+#card-header {
+  background-color: rgb(231, 229, 229);
+}
+#card-header-user {
+  background-color: rgb(231, 229, 229);
+}
+
+#card-body {
+  padding: 1%;
+  background-color: rgb(231, 229, 229);
+}
+#card-body-user {
+  padding: 1%;
+  background-color:rgb(231, 229, 229);
+}
+
+#card{
+  position: absolute;
+  right: 32%;
+  top: 100%;
+  width: 31%;
+}
+#card-user{
+  position: absolute;
+  right: 0%;
+  top: 100%;
+  width: 40%;
+}
+#btnlog-sign{
+  background-color: rgb(0, 255, 0);
+}
+
+#btnlog-sign:hover{
+  background-color: red;
+}
+
+#decoracao{
+  max-width: 100%;
+  height: 50%;
+  margin-top: -42%;
+}

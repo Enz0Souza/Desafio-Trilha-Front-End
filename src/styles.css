@@ -8,22 +8,28 @@
 }
 
 header {
-  background-color:#E69601;
+  background-color: #ff8411;
 }
 
 #Logo {
   position: relative;
-  left: 15%;
+  left: 10%;
   width: 20%;
   height: 20%;
 }
 
 #pesquisa {
+  display: flex;
   position: absolute;
+  justify-content: center;
   top: 10%;
-  left: 38%;
+  left: 36%;
   width: 30%;
-  height: 5%;
+  height: 4%;
+}
+
+#inputsh{
+  width: 100%;
 }
 
  nav {
@@ -32,7 +38,7 @@ header {
       top: 10%;
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 65px;
       font-size: 1.5rem;
     }
 
@@ -47,7 +53,7 @@ header {
     #agenda{
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       width: 23%;
 
     }

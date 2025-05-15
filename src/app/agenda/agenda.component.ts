@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+declare function agendar(): void;
+
+
 @Component({
   selector: 'app-agenda',
   imports: [],
@@ -7,5 +10,8 @@ import { Component } from '@angular/core';
   styleUrl: './agenda.component.css'
 })
 export class AgendaComponent {
+  ngOnInit() {
+    agendar();
+  }
 
 }

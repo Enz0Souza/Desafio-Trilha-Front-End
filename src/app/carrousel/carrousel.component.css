@@ -26,5 +26,20 @@
 }
 
 .buttons{
-  
+  position: absolute;
+  left: 35%;
+  top: 43%;
+  background-color: black;
+  color: white;
+  padding: 1%;
+  border-radius: 40%;
+}
+
+.buttons:hover{
+  background-color: rgb(61, 61, 61);
+}
+
+#avn{
+  display: flex;
+  margin-left: 30%;
 }

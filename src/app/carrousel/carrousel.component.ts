@@ -16,6 +16,7 @@ export class CarrouselComponent {
   images = [
     { src: 'banner.png'},
     { src: 'Banner-site.png'},
+    { src: 'banner23off.png'},
 
   ];
   ngOnInit() {//slide automatico

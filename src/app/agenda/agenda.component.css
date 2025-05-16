@@ -9,18 +9,49 @@
   justify-content: center;
 }
 
-#formbody {
-  display: flex;
-  justify-content: center;
-  width: 10%;
-  margin-left: 45%;
-}
 #agendamentos {
   margin-top: 30px;
 }
 .erro {
   color: red;
 }
-#container{
+#container {
+  position: relative;
+  width: 20%;
+  padding: 4%;
+  border-radius: 20%;
+  margin-top: 1%;
+  margin-bottom: 12.6%;
   margin-left: 42%;
+  background-color: #ff8411;
+}
+
+/*responsividade notebook*/
+@media (max-width: 1300px) {
+  #titulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+  }
+
+  #formbody {
+    display: flex;
+    justify-content: center;
+  }
+
+  #formbody {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    margin-left: 45%;
+  }
+  #agendamentos {
+    margin-top: 30px;
+  }
+  .erro {
+    color: red;
+  }
+  #container {
+    margin-left: 42%;
+  }
 }

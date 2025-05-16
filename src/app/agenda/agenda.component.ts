@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 declare function agendar(): void;
 
-
 @Component({
   selector: 'app-agenda',
   imports: [],
@@ -11,7 +10,7 @@ declare function agendar(): void;
 })
 export class AgendaComponent {
   ngOnInit() {
-    agendar();
+    agendar();//iniciando a função agendar
   }
 
 }

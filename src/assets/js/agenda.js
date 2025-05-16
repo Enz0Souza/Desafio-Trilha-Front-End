@@ -28,4 +28,9 @@ function agendar() {
 
   document.getElementById("data").value = "";
   document.getElementById("hora").value = "";
+
+  localStorage.setItem("agendamentos", JSON.stringify(agendamentos));
+
+
+
 }

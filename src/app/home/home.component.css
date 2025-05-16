@@ -10,3 +10,13 @@ h3{
 .card-img-top{
    margin-left: 35%;
 }
+
+  #horizontal-line{
+    width: 1263px;
+    height: 1px;
+    background-color: silver;
+  }
+
+  #produtos{
+    margin: 1%;
+  }

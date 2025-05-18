@@ -7,6 +7,18 @@
 
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
 header {
   background-color: #ff8411;
 }
@@ -114,12 +126,6 @@ nav {
   top: 100%;
   width: 40%;
 }
-#btnlog-sign{
-
-}
-
-#btnlog-sign:hover{
-}
 
 #decoracao{
   max-width: 100%;
@@ -139,7 +145,7 @@ nav {
 @media (max-width: 1300px) {
 
   header {
-    background-color: black;
+  background-color: #ff8411;
   }
 
   #Logo {

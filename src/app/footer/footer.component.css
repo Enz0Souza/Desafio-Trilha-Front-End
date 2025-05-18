@@ -1,28 +1,23 @@
 footer {
   display: flex;
+  align-items: center;
   width: 100%;
   height: 60px;
   background-color: #ff8411;
-  font-size: 20px;
-  font: inherit;
   color: white;
-  text-align: center;
-  padding: 10px;
-  align-items: center;
-  padding: 15px 0;
-  margin-top: auto;
+  padding: 0 20px;
+  font-size: 20px;
+}
 
-  img {
-    width: 45px;
-    height: auto;
-  }
+footer img {
+  width: 45px;
+  height: auto;
 }
 
 .icons img {
-  height: auto;
   border-radius: 8px;
   cursor: pointer;
-  scale: 0.8;
+  transform: scale(0.8);
   transition: transform 0.2s;
 }
 
@@ -30,59 +25,36 @@ footer {
   transform: scale(1.07);
 }
 
-.social{
-  position: relative;
-  top: 20%;
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-#copyright{
-  margin-left: 3540%;
+#copyright {
+  white-space: nowrap;
+  margin-left: auto;
 }
 
-.bi{
-  margin: 1%;
+.bi {
+  margin: 0 5px;
 }
 
-/*responsividade notebook*/
+/* responsividade notebook*/
 @media (max-width: 1300px) {
   footer {
-    display: flex;
-    width: 100%;
-    height: 60px;
-    background-color: #ff8411;
-    font-size: 20px;
-    font: inherit;
-    color: white;
+    flex-direction: column;
+    height: auto;
     text-align: center;
     padding: 10px;
-    align-items: center;
-    padding: 15px 0;
-    margin-top: auto;
-
-    img {
-      width: 45px;
-      height: auto;
-    }
+    gap: 10px;
   }
 
-  .icons img {
-    height: auto;
-    border-radius: 8px;
-    cursor: pointer;
-    scale: 0.8;
-    transition: transform 0.2s;
+  .social {
+    justify-content: center;
   }
 
-  .icons img:hover {
-    transform: scale(1.07);
-  }
-
-  .social{
-    position: relative;
-    top: 20%;
-  }
-
-  #copyright{
-    margin-left: 2120%;
+  #copyright {
+    margin-left: 0;
   }
 }

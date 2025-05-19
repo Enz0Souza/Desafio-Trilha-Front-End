@@ -33,7 +33,7 @@ footer img {
 
 #copyright {
   white-space: nowrap;
-  margin-left: auto;
+  margin-left: 3400%;
 }
 
 .bi {
@@ -43,11 +43,14 @@ footer img {
 /* responsividade notebook*/
 @media (max-width: 1300px) {
   footer {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-    padding: 10px;
-    gap: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #ff8411;
+    color: white;
+    padding: 0 20px;
+    font-size: 15px;
   }
 
   .social {
@@ -55,6 +58,27 @@ footer img {
   }
 
   #copyright {
+    margin-left: 2050%;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  footer {
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #copyright {
     margin-left: 0;
+    font-size: 14px;
   }
 }

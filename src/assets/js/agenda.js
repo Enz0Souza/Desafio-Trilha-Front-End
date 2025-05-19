@@ -1,15 +1,28 @@
-const agendamentos = [];
+const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderizarAgendamentos();
+});
 
 function agendar() {
-  const data = document.getElementById("data").value;
-  const hora = document.getElementById("hora").value;
+  const dataInput = document.getElementById("data");
+  const horaInput = document.getElementById("hora");
   const erroMsg = document.getElementById("erro-msg");
-  const lista = document.getElementById("lista-agendamentos");
 
+  const data = dataInput.value.trim();
+  const hora = horaInput.value.trim();
   erroMsg.textContent = "";
 
   if (!data || !hora) {
     erroMsg.textContent = "Por favor, preencha data e hora.";
+    return;
+  }
+
+  const dataHora = new Date(`${data}T${hora}`);
+  const agora = new Date();
+
+  if (dataHora <= agora) {
+    erroMsg.textContent = "Escolha um horário futuro.";
     return;
   }
 
@@ -21,16 +34,21 @@ function agendar() {
   }
 
   agendamentos.push(agendamento);
-
-  const item = document.createElement("li");
-  item.textContent = `Agendado para: ${data} às ${hora}`;
-  lista.appendChild(item);
-
-  document.getElementById("data").value = "";
-  document.getElementById("hora").value = "";
-
   localStorage.setItem("agendamentos", JSON.stringify(agendamentos));
+  renderizarAgendamentos();
 
+  dataInput.value = "";
+  horaInput.value = "";
+}
 
+function renderizarAgendamentos() {
+  const lista = document.getElementById("lista-agendamentos");
+  lista.innerHTML = "";
 
+  agendamentos.forEach(ag => {
+    const [data, hora] = ag.split(" ");
+    const item = document.createElement("li");
+    item.textContent = `Agendado para: ${data} às ${hora}`;
+    lista.appendChild(item);
+  });
 }

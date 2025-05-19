@@ -1,5 +1,6 @@
+import { TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 
@@ -9,18 +10,33 @@ import { FooterComponent } from './footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'petshop';
-  IsUserOpen = false;
+
+export class AppComponent implements OnInit {
   IsNotificationOpen = false;
+  IsUserOpen = false;
+  nomeUsuario: string | null = null;
+  title: any
+  ngOnInit() {
+    const userData = localStorage.getItem('user');
+    if (userData) {
+      const user = JSON.parse(userData);
+      this.nomeUsuario = user.nome || user.email;
+    }
+  }
 
-
-  ToggleNotification(){
+  ToggleNotification() {
     this.IsNotificationOpen = !this.IsNotificationOpen;
   }
 
-  ToggleUserCard(){
+  ToggleUserCard() {
     this.IsUserOpen = !this.IsUserOpen;
   }
+
+  logout() {
+    localStorage.removeItem('user');
+    this.nomeUsuario = null;
+    location.reload();
+  }
 }
+
 

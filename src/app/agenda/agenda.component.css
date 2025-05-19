@@ -12,46 +12,69 @@
 #agendamentos {
   margin-top: 30px;
 }
+
 .erro {
   color: red;
 }
+
 #container {
   position: relative;
-  width: 20%;
+  width: 25%;
   padding: 4%;
   border-radius: 20%;
-  margin-top: 1%;
-  margin-bottom: 12.6%;
-  margin-left: 42%;
+  margin: 1% auto 12.6% auto;
   background-color: #ff8411;
 }
 
-/*responsividade notebook*/
+#agenda {
+  width: 32%;
+  margin: 20px auto 0 auto;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  display: block;
+}
+
+/* Responsividade para notebook */
 @media (max-width: 1300px) {
-  #titulo {
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-  }
-
-  #formbody {
-    display: flex;
-    justify-content: center;
-  }
-
-  #formbody {
-    display: flex;
-    justify-content: center;
-    width: 10%;
-    margin-left: 45%;
-  }
-  #agendamentos {
-    margin-top: 30px;
-  }
-  .erro {
-    color: red;
-  }
   #container {
-    margin-left: 42%;
+    width: 40%;
+    margin: 1% auto;
+  }
+
+  #agenda {
+    width: 40%;
+  }
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+  #container {
+    width: 80%;
+    padding: 6%;
+    border-radius: 10px;
+    margin: 5% auto;
+  }
+
+  #agenda {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #titulo {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  #formbody {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #agendamentos {
+    margin-top: 20px;
+    padding: 0 10px;
   }
 }

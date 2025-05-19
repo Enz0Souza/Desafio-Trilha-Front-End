@@ -1,12 +1,10 @@
 .carousel-container {
   display: flex;
-  position: relative;
-  right: 17%;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 1250px;
-  margin: auto;
+  width: 70%;
+  max-width: 2000px;
+  margin-left: 0%;
 }
 
 .carousel-wrapper {
@@ -55,7 +53,6 @@
     justify-content: center;
     width: 100%;
     max-width: 2000px;
-    margin: auto;
   }
 
   .carousel-wrapper {
@@ -94,5 +91,16 @@
 
   .card-title{
     font-size: medium;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    max-width: 800px;
+    margin-left: 0%;
   }
 }

@@ -11,12 +11,21 @@ h3{
    margin-left: 35%;
 }
 
-  #horizontal-line{
-    width: 1263px;
-    height: 1px;
-    background-color: silver;
-  }
+#horizontal-line {
+  width: 100%;
+  max-width: 2263px;
+  height: 1px;
+  background-color: silver;
+  margin: 0 auto;
+}
+
 
   #produtos{
     margin: 1%;
   }
+
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+ 
+}

@@ -39,7 +39,7 @@ export class RegisterComponent {
     }
 
     this.http
-      .post('https://petshop-beta-liard.vercel.app/', this.registerForm.value)
+      .post('https://api-eight-ebon.vercel.app/', this.registerForm.value)
       .subscribe({
         next: (res: any) => {
           alert(res.message || 'Usuário registrado com sucesso!');

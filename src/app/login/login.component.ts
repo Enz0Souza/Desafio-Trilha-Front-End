@@ -26,7 +26,7 @@ export class LoginComponent {
 
   onSubmit() {
     this.http
-      .post('https://petshop-beta-liard.vercel.app/', this.loginForm.value)
+      .post('https://api-eight-ebon.vercel.app/', this.loginForm.value)
       .subscribe({
         next: (res: any) => {
           alert('Login realizado com sucesso!');

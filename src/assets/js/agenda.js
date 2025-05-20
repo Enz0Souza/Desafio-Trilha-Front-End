@@ -1,6 +1,6 @@
-const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
+const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];//busca a lista de agendamentos do localstorage
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {//carregar os agendamentos quando o site estiver totalmente carregado
   renderizarAgendamentos();
 });
 
@@ -14,7 +14,7 @@ function agendar() {
   erroMsg.textContent = "";
 
   if (!data || !hora) {
-    erroMsg.textContent = "Por favor, preencha data e hora.";
+    erroMsg.textContent = "Por favor, preencha data e hora.";z
     return;
   }
 

@@ -10,6 +10,7 @@
           class="form-control"
           formControlName="email"
           placeholder="Digite seu email"
+          required
         />
       </div>
       <div class="form-group">
@@ -19,6 +20,7 @@
           class="form-control"
           formControlName="senha"
           placeholder="Digite sua senha"
+          required
         />
       </div>
     </div>
@@ -30,6 +32,7 @@
         class="form-control"
         formControlName="endereco"
         placeholder="Rua Exemplo, 123"
+        required
       />
     </div>
 
@@ -40,21 +43,22 @@
         class="form-control"
         formControlName="complemento"
         placeholder="Apartamento, casa..."
+        required
       />
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label>Cidade</label>
-        <input type="text" class="form-control" formControlName="cidade" />
+        <input type="text" class="form-control" formControlName="cidade"  required/>
       </div>
       <div class="form-group">
         <label>Estado</label>
-        <input type="text" class="form-control" formControlName="estado" />
+        <input type="text" class="form-control" formControlName="estado" required />
       </div>
       <div class="form-group">
         <label>CEP</label>
-        <input type="text" class="form-control" formControlName="cep" />
+        <input type="text" class="form-control" formControlName="cep" required />
       </div>
     </div>
 

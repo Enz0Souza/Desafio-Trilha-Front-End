@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -20,21 +20,21 @@ export class RegisterComponent {
     private router: Router
   ) {
     this.registerForm = this.fb.group({
-      email: [''],
-      senha: [''],
-      endereco: [''],
-      complemento: [''],
-      cidade: [''],
-      estado: [''],
-      cep: [''],
-      receberPromocoes: [false],
-      aceitarTermos: [false],
+      email: ['', Validators.required],
+      senha: ['', Validators.required],
+      endereco: ['', Validators.required],
+      complemento: ['', Validators.required],
+      cidade: ['', Validators.required],
+      estado: ['', Validators.required],
+      cep: ['', Validators.required],
+      receberPromocoes: [false], // opcional
+      aceitarTermos: [false, Validators.requiredTrue],
     });
   }
 
   onSubmit() {
-    if (!this.registerForm.value.aceitarTermos) {//caso não marque a opção dos termos
-      alert('Você precisa aceitar os Termos e Condições.');
+    if (this.registerForm.invalid) {
+      alert('Por favor, preencha todos os campos obrigatórios e aceite os Termos.');
       return;
     }
 
@@ -43,7 +43,7 @@ export class RegisterComponent {
       .subscribe({
         next: (res: any) => {
           alert(res.message || 'Usuário registrado com sucesso!');
-          this.router.navigate(['/login']);//mover o usuario para login após ter completado o registro
+          this.router.navigate(['/login']);
         },
         error: (err) => {
           alert(

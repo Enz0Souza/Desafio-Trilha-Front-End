@@ -26,7 +26,7 @@ export class LoginComponent {
 
   onSubmit() {
     this.http
-      .post('http://localhost:3000/login', this.loginForm.value)
+      .post('https://petshop-beta-liard.vercel.app/', this.loginForm.value)
       .subscribe({
         next: (res: any) => {
           alert('Login realizado com sucesso!');

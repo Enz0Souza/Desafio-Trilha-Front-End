@@ -11,32 +11,33 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  loginForm: FormGroup;
+  // loginForm: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-    private http: HttpClient,
-    private router: Router
-  ) {
-    this.loginForm = this.fb.group({
-      email: [''],
-      senha: [''],
-    });
-  }
+  // constructor(
+  //   private fb: FormBuilder,
+  //   private http: HttpClient,
+  //   private router: Router
+  // ) {
+  //   this.loginForm = this.fb.group({
+  //     email: [''],
+  //     senha: [''],
+  //   });
+  // }
 
   onSubmit() {
-    this.http
-      .post('https://petshop-web-6v8h.onrender.com/', this.loginForm.value)
-      .subscribe({
-        next: (res: any) => {
-          alert('Login realizado com sucesso!');
-          localStorage.setItem('usuarioLogado', 'true');
-          localStorage.setItem('user', JSON.stringify(res.user));
-          this.router.navigate(['/home']);
-        },
-        error: (err) => {
-          alert('Erro no login: ' + (err.error.message || 'Dados inválidos'));
-        },
-      });
-  }
+  //   this.http
+  //     .post('https://petshop-web-6v8h.onrender.com/', this.loginForm.value)
+  //     .subscribe({
+  //       next: (res: any) => {
+  //         alert('Login realizado com sucesso!');
+  //         localStorage.setItem('usuarioLogado', 'true');
+  //         localStorage.setItem('user', JSON.stringify(res.user));
+  //         this.router.navigate(['/home']);
+  //       },
+  //       error: (err) => {
+  //         alert('Erro no login: ' + (err.error.message || 'Dados inválidos'));
+  //       },
+  //     });
+  // }
+}
 }

@@ -12,44 +12,44 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
-//   registerForm: FormGroup;
+  registerForm: FormGroup;
 
-//   constructor(
-//     private fb: FormBuilder,
-//     private http: HttpClient,
-//     private router: Router
-//   ) {
-//     this.registerForm = this.fb.group({
-//       email: ['', Validators.required],
-//       senha: ['', Validators.required],
-//       endereco: ['', Validators.required],
-//       complemento: ['', Validators.required],
-//       cidade: ['', Validators.required],
-//       estado: ['', Validators.required],
-//       cep: ['', Validators.required],
-//       receberPromocoes: [false], // opcional
-//       aceitarTermos: [false, Validators.requiredTrue],
-//     });
-//   }
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private router: Router
+  ) {
+    this.registerForm = this.fb.group({
+      email: ['', Validators.required],
+      senha: ['', Validators.required],
+      endereco: ['', Validators.required],
+      complemento: ['', Validators.required],
+      cidade: ['', Validators.required],
+      estado: ['', Validators.required],
+      cep: ['', Validators.required],
+      receberPromocoes: [false], // opcional
+      aceitarTermos: [false, Validators.requiredTrue],
+    });
+  }
 
-//   onSubmit() {
-//     if (this.registerForm.invalid) {
-//       alert('Por favor, preencha todos os campos obrigatórios e aceite os Termos.');
-//       return;
-//     }
+  onSubmit() {
+    if (this.registerForm.invalid) {
+      alert('Por favor, preencha todos os campos obrigatórios e aceite os Termos.');
+      return;
+    }
 
-//     this.http
-//       .post('https://petshop-web-6v8h.onrender.com/', this.registerForm.value)
-//       .subscribe({
-//         next: (res: any) => {
-//           alert(res.message || 'Usuário registrado com sucesso!');
-//           this.router.navigate(['/login']);
-//         },
-//         error: (err) => {
-//           alert(
-//             'Erro ao registrar: ' + (err.error.message || 'Erro desconhecido')
-//           );
-//         },
-//       });
-//   }
+    this.http
+      .post('https://petshop-web-6v8h.onrender.com/', this.registerForm.value)
+      .subscribe({
+        next: (res: any) => {
+          alert(res.message || 'Usuário registrado com sucesso!');
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          alert(
+            'Erro ao registrar: ' + (err.error.message || 'Erro desconhecido')
+          );
+        },
+      });
+  }
 }

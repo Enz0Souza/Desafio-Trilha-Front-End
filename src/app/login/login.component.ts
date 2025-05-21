@@ -26,7 +26,7 @@ export class LoginComponent {
 
   onSubmit() {
     this.http
-      .post('https://petshop-web-6v8h.onrender.com/', this.loginForm.value)
+      .post('http://localhost:3000/login', this.loginForm.value)
       .subscribe({
         next: (res: any) => {
           alert('Login realizado com sucesso!');
